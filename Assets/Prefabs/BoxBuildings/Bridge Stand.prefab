@@ -29,7 +29,6 @@ Transform:
   m_Children:
   - {fileID: 6368924933290817551}
   - {fileID: 6368924934557773500}
-  - {fileID: 6368924934222745482}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -94,68 +93,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
   m_PrefabInstance: {fileID: 8439485862876637622}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &8439485863615350912
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8439485864288698663}
-    m_Modifications:
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934945565616116832, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-      propertyPath: m_Name
-      value: Bridge Stand (2)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
---- !u!4 &6368924934222745482 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3278027713360742154, guid: 8965743df07e06d4daceba6d3b37c361, type: 3}
-  m_PrefabInstance: {fileID: 8439485863615350912}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8439485864545730309
 PrefabInstance:

@@ -47,7 +47,7 @@ public class PlayerMove : MonoBehaviour
         charController.SimpleMove(Vector3.ClampMagnitude(forwardMovement + rightMovement, 1.0f) * movementSpeed);
 
         if ((vertInput != 0 || horizInput != 0) && OnSlope())
-            charController.Move(Vector3.down * charController.height / 2 * slopeForce * Time.smoothDeltaTime);
+            charController.Move(Vector3.down * charController.height / 2 * slopeForce * Time.deltaTime);
 
 
         SetMovementSpeed();
@@ -97,8 +97,8 @@ public class PlayerMove : MonoBehaviour
         do
         {
             float jumpForce = jumpFallOff.Evaluate(timeInAir);
-            charController.Move(Vector3.up * jumpForce * jumpMultiplier * Time.smoothDeltaTime);
-            timeInAir += Time.smoothDeltaTime;
+            charController.Move(Vector3.up * jumpForce * jumpMultiplier * Time.deltaTime);
+            timeInAir += Time.deltaTime;
             yield return null;
         } while (!charController.isGrounded && charController.collisionFlags != CollisionFlags.Above);
 
