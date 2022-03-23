@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
 
+
 [RequireComponent(typeof(WeaponManager))]
 public class PlayerShoot : NetworkBehaviour
 {
@@ -29,7 +30,13 @@ public class PlayerShoot : NetworkBehaviour
         weaponManager = GetComponent<WeaponManager>();
     }
 
-    void Update()
+	private void OnDisable()
+	{
+        CancelInvoke("Shoot");
+    }
+
+
+	void Update()
     {
         currentWeapon = weaponManager.GetCurrentWeapon();
 
