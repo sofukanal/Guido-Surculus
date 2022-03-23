@@ -8,14 +8,13 @@ public class PlayerShoot : NetworkBehaviour
 {
     private const string PLAYER_TAG = "Player";
 
-    public PlayerWeapon currentWeapon;
-
     [SerializeField]
     private Camera cam;
 
     [SerializeField]
     private LayerMask mask;
 
+    public PlayerWeapon currentWeapon;
     private WeaponManager weaponManager;
 
     void Start()

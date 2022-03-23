@@ -9,14 +9,8 @@ public class Player : NetworkBehaviour
     private bool _isDead = false;
     public bool isDead
     {
-        get 
-        { 
-            return _isDead; 
-        }
-        protected set
-        {
-            _isDead = value;
-        }
+        get { return _isDead; }
+        protected set { _isDead = value; }
     }
 
     [SerializeField]
@@ -61,8 +55,6 @@ public class Player : NetworkBehaviour
     {
         isDead = true;
 
-        CancelInvoke("Shoot");
-
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
             disableOnDeath[i].enabled = false;
@@ -81,15 +73,18 @@ public class Player : NetworkBehaviour
     {
         yield return new WaitForSeconds(GameManager.instance.matchSettings.respawnTime);
 
-        SetDefaults();
+        
         Transform _spawnPoint = NetworkManager.singleton.GetStartPosition();
         transform.position = _spawnPoint.position;
         transform.rotation = _spawnPoint.rotation;
+        
+        SetDefaults();
 
         Debug.Log(transform.name + " respawned.");
     }
 
-        public void SetDefaults()
+
+    public void SetDefaults()
     {
         isDead = false;
 
