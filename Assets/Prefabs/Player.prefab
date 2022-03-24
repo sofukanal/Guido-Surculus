@@ -491,14 +491,14 @@ GameObject:
   - component: {fileID: 7561200107550615554}
   - component: {fileID: 7561200107550615553}
   - component: {fileID: 7891666307146938493}
-  - component: {fileID: 2530887715031259486}
   - component: {fileID: 5162967268908265720}
   - component: {fileID: 1727023459480925786}
+  - component: {fileID: 2908275267104837357}
   - component: {fileID: 1278333799329549939}
   - component: {fileID: 8458868570708043524}
-  - component: {fileID: 2908275267104837357}
   - component: {fileID: 5297174560777045208}
   - component: {fileID: 1304339984930952433}
+  - component: {fileID: 2530887715031259486}
   - component: {fileID: 7758423060059270038}
   - component: {fileID: 1067691254558806909}
   m_Layer: 13
@@ -556,23 +556,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2530887715031259486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7561200107550615552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneId: 0
-  serverOnly: 0
-  visible: 0
-  m_AssetId: e0bad96bcc344aa46b2b75b1cc79e916
-  hasSpawned: 0
 --- !u!114 &5162967268908265720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,6 +615,28 @@ MonoBehaviour:
     m_RotationOrder: 4
   jumpMultiplier: 5
   jumpKey: 32
+--- !u!114 &2908275267104837357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561200107550615552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b91d97847bf1c4aa0a2d4769c607c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  weaponLayorName: Weapon
+  weaponHolder: {fileID: 9037568120565137620}
+  primaryWeapon:
+    name: RE48
+    damage: 10
+    range: 100
+    fireRate: 5
+    graphics: {fileID: 5422217969572621631, guid: 4f0a4b744e923e2419c7bf89b3958758, type: 3}
 --- !u!114 &1278333799329549939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,28 +687,6 @@ MonoBehaviour:
   playerGraphics: {fileID: 7561200107316919907}
   playerUIPrefab: {fileID: 1022442137463555410, guid: 4f13c8598f3e8ae42a9fb42a30fb9a8e, type: 3}
   playerUIInstance: {fileID: 0}
---- !u!114 &2908275267104837357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7561200107550615552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39b91d97847bf1c4aa0a2d4769c607c5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  syncMode: 0
-  syncInterval: 0.1
-  weaponLayorName: Weapon
-  weaponHolder: {fileID: 9037568120565137620}
-  primaryWeapon:
-    name: RE48
-    damage: 10
-    range: 100
-    fireRate: 5
-    graphics: {fileID: 5422217969572621631, guid: 4f0a4b744e923e2419c7bf89b3958758, type: 3}
 --- !u!114 &5297174560777045208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -721,13 +704,7 @@ MonoBehaviour:
   cam: {fileID: 7561200106705883043}
   mask:
     serializedVersion: 2
-    m_Bits: 49207
-  currentWeapon:
-    name: RE48
-    damage: 10
-    range: 100
-    fireRate: 5
-    graphics: {fileID: 5422217969572621631, guid: 4f0a4b744e923e2419c7bf89b3958758, type: 3}
+    m_Bits: 16439
 --- !u!82 &1304339984930952433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -824,6 +801,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2530887715031259486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7561200107550615552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: e0bad96bcc344aa46b2b75b1cc79e916
+  hasSpawned: 0
 --- !u!114 &7758423060059270038
 MonoBehaviour:
   m_ObjectHideFlags: 0

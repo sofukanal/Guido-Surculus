@@ -21,8 +21,6 @@ public class PlayerSetup : NetworkBehaviour
     [HideInInspector]
     public GameObject playerUIInstance;
 
-    Camera sceneCamera;
-
 
     void Start()
     {
@@ -37,9 +35,9 @@ public class PlayerSetup : NetworkBehaviour
 
             playerUIInstance = Instantiate(playerUIPrefab);
             playerUIInstance.name = playerUIPrefab.name;
-        }
 
-        GetComponent<Player>().Setup();
+            GetComponent<Player>().SetupPlayer();
+        }
     }
 
 
@@ -80,7 +78,8 @@ public class PlayerSetup : NetworkBehaviour
     {
         Destroy(playerUIInstance);
 
-        GameManager.instance.SetSceneCameraActive(true);
+        if (isLocalPlayer)
+            GameManager.instance.SetSceneCameraActive(true);
 
         GameManager.UnRegisterPlayer(transform.name);
     }

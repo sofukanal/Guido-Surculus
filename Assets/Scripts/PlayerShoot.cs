@@ -15,7 +15,7 @@ public class PlayerShoot : NetworkBehaviour
     [SerializeField]
     private LayerMask mask;
 
-    public PlayerWeapon currentWeapon;
+    private PlayerWeapon currentWeapon;
     private WeaponManager weaponManager;
 
     void Start()
@@ -23,20 +23,19 @@ public class PlayerShoot : NetworkBehaviour
         // Checks after Player camera
         if (cam == null)
         {
-            print("PlayerShoot: No camera referenced!");
+            Debug.LogError("PlayerShoot: No camera referenced!");
             this.enabled = false;
         }
 
         weaponManager = GetComponent<WeaponManager>();
     }
 
-	private void OnDisable()
+    private void OnDisable()
 	{
         CancelInvoke("Shoot");
     }
-
-
-	void Update()
+    
+    void Update()
     {
         currentWeapon = weaponManager.GetCurrentWeapon();
 
