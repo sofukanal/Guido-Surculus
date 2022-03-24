@@ -651,6 +651,11 @@ MonoBehaviour:
   - {fileID: 1727023459480925786}
   - {fileID: 5297174560777045208}
   - {fileID: 6301649144665820868}
+  disableGameObjectsOnDeath:
+  - {fileID: 7561200107316919907}
+  - {fileID: 7561200106705883047}
+  deathEffect: {fileID: 1329845292236604, guid: 686a76ebb235a3a49804ad6c4750b80a, type: 3}
+  spawnEffect: {fileID: 1329845292236604, guid: 686a76ebb235a3a49804ad6c4750b80a, type: 3}
 --- !u!114 &8458868570708043524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +681,7 @@ MonoBehaviour:
   dontDrawLayerName: DontDraw
   playerGraphics: {fileID: 7561200107316919907}
   playerUIPrefab: {fileID: 1022442137463555410, guid: 4f13c8598f3e8ae42a9fb42a30fb9a8e, type: 3}
+  playerUIInstance: {fileID: 0}
 --- !u!114 &2908275267104837357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -712,16 +718,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  cam: {fileID: 7561200106705883043}
+  mask:
+    serializedVersion: 2
+    m_Bits: 49207
   currentWeapon:
     name: RE48
     damage: 10
     range: 100
     fireRate: 5
     graphics: {fileID: 5422217969572621631, guid: 4f0a4b744e923e2419c7bf89b3958758, type: 3}
-  cam: {fileID: 7561200106705883043}
-  mask:
-    serializedVersion: 2
-    m_Bits: 49207
 --- !u!82 &1304339984930952433
 AudioSource:
   m_ObjectHideFlags: 0
@@ -830,10 +836,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f74aedd71d9a4f55b3ce499326d45fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   clientAuthority: 1
-  sendInterval: 0.05
+  sendInterval: 0.02
   syncPosition: 1
   syncRotation: 1
   syncScale: 0
@@ -864,10 +870,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 734b48bea0b204338958ee3d885e11f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  syncMode: 0
+  syncMode: 1
   syncInterval: 0.1
   clientAuthority: 1
-  sendInterval: 0.05
+  sendInterval: 0.02
   syncPosition: 1
   syncRotation: 1
   syncScale: 0
