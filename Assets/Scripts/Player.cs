@@ -16,10 +16,10 @@ public class Player : NetworkBehaviour
     }
 
     [SerializeField]
-    private int maxHealth = 100;
+    private const int maxHealth = 100;
 
     [SyncVar]
-    private int currentHealth;
+    public int currentHealth;
 
     [SerializeField]
     private Behaviour[] disableOnDeath;
