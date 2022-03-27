@@ -15,12 +15,12 @@ public class Player : NetworkBehaviour
         protected set { _isDead = value; }
     }
 
+
+    [Header("Health")]
     [SerializeField]
-    private const int maxHealth = 100;
+    [SyncVar] public int currentHealth = 100;
 
-    [SyncVar]
-    public int currentHealth;
-
+    [Header("Disables")]
     [SerializeField]
     private Behaviour[] disableOnDeath;
     private bool[] wasEnabled;
@@ -28,6 +28,7 @@ public class Player : NetworkBehaviour
     [SerializeField]
     private GameObject[] disableGameObjectsOnDeath;
 
+    [Header("Effects")]
     [SerializeField]
     private GameObject deathEffect;
 
@@ -148,8 +149,6 @@ public class Player : NetworkBehaviour
     {
         isDead = false;
 
-        currentHealth = maxHealth;
-
         // Enable the components
         for (int i = 0; i < disableOnDeath.Length; i++)
         {
@@ -170,6 +169,8 @@ public class Player : NetworkBehaviour
         //Create spawn effect
         GameObject _gfxIns = (GameObject)Instantiate(spawnEffect, transform.position, Quaternion.identity);
         Destroy(_gfxIns, 3f);
+
+        currentHealth = 100;
     }
 }
 
