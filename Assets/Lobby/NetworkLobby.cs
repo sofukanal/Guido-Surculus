@@ -1,14 +1,12 @@
-using System.Collections;
 using UnityEngine;
 using Mirror;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
 
 public class NetworkLobby : NetworkManager
 {
-    [SerializeField] string menuScene;
+    [Scene] [SerializeField] private string menuScene = string.Empty;
 
     [Header("Room")]
     [SerializeField] private NetworkRoomPlayerLobby roomPlayerPrefab = null;
@@ -28,7 +26,8 @@ public class NetworkLobby : NetworkManager
         }
     }
 
-    [Obsolete]
+
+	[Obsolete]
     public override void OnClientConnect(NetworkConnection conn)
     {
         base.OnClientConnect(conn);
@@ -52,7 +51,7 @@ public class NetworkLobby : NetworkManager
             return;
         }
 
-        if (SceneManager.GetActiveScene().name != menuScene)
+        if (SceneManager.GetActiveScene().path != menuScene)
         {
             conn.Disconnect();
             return;
@@ -61,7 +60,7 @@ public class NetworkLobby : NetworkManager
 
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        if (SceneManager.GetActiveScene().name != menuScene)
+        if (SceneManager.GetActiveScene().path != menuScene)
         {
             NetworkRoomPlayerLobby roomPlayerInstance = Instantiate(roomPlayerPrefab);
 
